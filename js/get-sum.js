@@ -7,6 +7,28 @@
  */
 const getSumOfTriple = (arr, start, end) => {
   // 请实现……
+
+  //0、先验证是否为数组
+  let arrAfter=Array.isArray(arr)?arr:[]
+  let arrFilter=[];//
+
+  //1、如果start和end有值，且为number类型,end数值大于start，筛选出大于等于start，小于end且为3的倍数的数组集合
+  const startResult = typeof(start)==="number"
+  const endResult =typeof(end)==="number"
+  if(startResult&&endResult&&end>start){
+    arrFilter=arrAfter.filter(item=>item>=start&&item<=end&&item%3===0)
+  }else{
+    //其他情况
+    arrFilter=arrAfter.filter(item=>item%3===0)
+  }
+
+  //2.叠加遍历
+  let sum=0;
+  arrFilter.forEach(item=>{
+    sum+=item;
+  })
+
+  return sum
 };
 
 // * ---------------- 实现的效果：

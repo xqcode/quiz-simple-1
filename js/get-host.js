@@ -5,6 +5,12 @@
  */
 const getHostName = (url) => {
   // 请实现……
+  url = url.match(/https?:\/\/([^/]+)\//i);
+  let domainName = "";
+  if (url && url[1]) {
+    domainName = url[1];
+  }
+  return domainName;
 };
 
 // * ---------------- 实现的效果：
