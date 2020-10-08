@@ -3,6 +3,28 @@
 
 // * ---------------- 请补充……
 
+// interface res{
+//   json:Function
+// };
+
+// async function test(response): Promise<any> {
+//   return response;
+// }
+
+
+// function test2(){
+//   return new Promise(function(resolve, reject){
+//     resolve()
+//   })
+// }
+
+// const getDataTest =async function(){
+
+// };
+
+// 不会ts类型声明
+
+
 const getData = async () =>
   await fetch('https://jsonplaceholder.typicode.com/todos/').then((response) => response.json());
 

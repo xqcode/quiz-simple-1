@@ -28,7 +28,15 @@ Demo 代码可以新建一个或多个文件（不限），
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
-```
+```less
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  div:nth-child(1) {
+  flex-grow: 1;
+  }
+}
 
 ## Q2
 
@@ -44,4 +52,4 @@ Demo 代码可以新建一个或多个文件（不限），
 > }
 > ```
 
-答：
+答：主要用less以及sass这两个css预处理插件，postcss以前公司的项目用过，但是自己独立开发的项目没用过，不太熟悉，css这一块关于移动端适配的方案用过rem或者vw或者vw结合rem，当然还有媒体查询。
